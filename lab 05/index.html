@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volunteer Form</title>
+</head>
+<body>
+  <h1>Volunteer Form</h1>
+
+  <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+    
+    <input type="hidden" name="hidden_field" value="Gilberto Aldahir Gil- Izaguirre">
+
+    <fieldset>
+      <legend>My Info</legend>
+
+      <p>
+        <label for="first_name_field">first name:</label>
+        <input type="text" id="first_name_field" name="first_name_field">
+      </p>
+
+      <p>
+        <label for="last_name_field">last name:</label>
+        <input type="text" id="last_name_field" name="last_name_field">
+      </p>
+
+      <p>
+        <label for="phone_field">phone:</label>
+        <input type="tel" id="phone_field" name="phone_field">
+      </p>
+
+      <p>
+        <label for="email_field">email:</label>
+        <input type="email" id="email_field" name="email_field">
+      </p>
+
+      <p>
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender_field" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender_field" value="Female">
+        <label for="female">Female</label>
+      </p>
+
+      <p>
+        <label for="age_field">Age:</label>
+        <select id="age_field" name="age_field">
+          <option value="under 18">under 18</option>
+          <option value="18-25">18–25</option>
+          <option value="26-40">26–40</option>
+          <option value="41-60">41–60</option>
+          <option value="60+">60+</option>
+        </select>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>My Availability</legend>
+
+      <p><strong>Days Available:</strong></p>
+      <p>
+        <input type="checkbox" id="sun" name="available_field[]" value="Sunday">
+        <label for="sun">Sunday</label><br>
+
+        <input type="checkbox" id="mon" name="available_field[]" value="Monday">
+        <label for="mon">Monday</label><br>
+
+        <input type="checkbox" id="tue" name="available_field[]" value="Tuesday">
+        <label for="tue">Tuesday</label><br>
+
+        <input type="checkbox" id="wed" name="available_field[]" value="Wednesday">
+        <label for="wed">Wednesday</label><br>
+
+        <input type="checkbox" id="thu" name="available_field[]" value="Thursday">
+        <label for="thu">Thursday</label><br>
+
+        <input type="checkbox" id="fri" name="available_field[]" value="Friday">
+        <label for="fri">Friday</label><br>
+
+        <input type="checkbox" id="sat" name="available_field[]" value="Saturday">
+        <label for="sat">Saturday</label>
+      </p>
+
+      <p>
+        <label for="comments_field">Comments:</label><br>
+        <textarea id="comments_field" name="comments_field" rows="4" cols="40"></textarea>
+      </p>
+    </fieldset>
+
+    <p>
+      <input type="submit" value="Submit Query">
+    </p>
+  </form>
+</body>
+</html>
