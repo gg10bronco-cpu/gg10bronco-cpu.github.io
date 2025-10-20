@@ -1,77 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Style This HTML Lab</title>
-  <link href='https://fonts.googleapis.com/css?family=Devonshire' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <!-- External CSS can stay, but we are adding internal CSS below -->
-  
+  <link href="https://fonts.googleapis.com/css?family=Devonshire" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+
   <style>
-    body { 
-      background-image: url("../images/black.jpg");
+    body {
+      background-image: url("images/black.jpg");
+      background-size: cover;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
     #page-wrapper {
       width: 960px;
-      margin: 0 auto;
-      box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 1); 
-      border-radius: 12px 12px 0px 0px;
-    } 
+      margin: 40px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+      border-radius: 12px 12px 0 0;
+      background-color: white;
+    }
 
+    /* Header */
     #header {
-      position: relative;
-      margin-top: 40px;
-      border-radius: 12px 12px 0px 0px; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      border-radius: 12px 12px 0 0;
     }
 
     #header h1 {
-      position: absolute;
-      left: 420px;
-      top: 5px;
       font-size: 3em;
       font-family: 'Devonshire', cursive;
       color: #E35335;
+      margin: 0;
     }
 
-    #header a#logo1 img {
-      margin-top: 20px;
-      margin-left: 20px;
-      margin-bottom: 20px;
+    /* Navigation */
+    #main-nav {
+      background-color: #333;
     }
 
-    #header #toplink {
+    #main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    #main-nav ul li a {
+      display: block;
+      padding: 10px 25px;
       text-decoration: none;
-      position: absolute;
-      top: -34px;
-      right: 10px;
-      color: white;
-      font-size: 1.8em;
+      color: #ccc;
     }
 
-    #footer {
-      background-color: #777;
-      height: 80px;
-      clear: both;
+    #main-nav ul li a:hover {
+      background-color: #ccc;
+      color: #333;
     }
 
+    /* Content */
     #content-wrapper {
-      background-image: url("../images/repeating.png");
-      float: left;
+      display: flex;
+      background-image: url("images/repeating.png");
+      overflow: auto;
     }
 
     #main-content {
-      min-height: 300px;
-      width: 715px;
-      margin-right: 30px;
-      float: left;
-      margin-left: 15px;
+      flex: 3;
+      padding: 20px;
     }
 
-    h2 strong {
-      font-size: 2em;
-      font-weight: 900;
+    #side-content {
+      flex: 1;
+      padding: 20px;
+      background-color: #f3f3f3;
     }
 
     .image-r {
@@ -83,55 +90,26 @@
       margin: 10px 0 10px 20px;
     }
 
-    #side-content {
-      min-height: 150px;
-      width: 200px;
-      float: left;
-    }
-
-    #main-nav {
-      float: left;
-      width: 100%;
-      background-color: #333;
-    }
-
-    #main-nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      float: left;
-      position: relative;
-      left: 50%;
-    }
-
-    #main-nav ul li {
-      float: left;
-      position: relative;
-      right: 50%;
-    }
-
-    #main-nav ul li a {
-      padding: 10px 25px;
-      display: block;
-      text-decoration: none;
-      color: #ccc;
-    }
-
-    #main-nav ul li a:hover {
-      background-color: #ccc;
-      color: #333;
-    }
-
-    #center {
-      width: 960px;
+    /* Footer */
+    #footer {
+      background-color: #777;
+      color: white;
       text-align: center;
-    }
-
-    strong {
-      font-weight: 900;
-      font-size: 48px;
+      padding: 30px 0;
+      border-radius: 0 0 12px 12px;
     }
   </style>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Style This HTML Lab</title>
+  <link href='https://fonts.googleapis.com/css?family=Devonshire' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/lab6_final.css">
 </head>
 
 <body>
@@ -177,26 +155,10 @@
       <aside id="side-content">
         <h3>Interesting Articles</h3>
         <ol id="news">
-          <li><a href="#">Article 1</a>
-            <div>
-              <p>Preview of very interesting article article</p>
-            </div>
-          </li>
-          <li><a href="#">Article 2</a>
-            <div>
-              <p>Preview of very interesting article article</p>
-            </div>
-          </li>
-          <li><a href="#">Article 3</a>
-            <div>
-              <p>Preview of very interesting article article</p>
-            </div>
-          </li>
-          <li><a href="#">Article 4</a>
-            <div>
-              <p>Preview of very interesting article article</p>
-            </div>
-          </li>
+          <li><a href="#">Article 1</a><div><p>Preview of very interesting article article</p></div></li>
+          <li><a href="#">Article 2</a><div><p>Preview of very interesting article article</p></div></li>
+          <li><a href="#">Article 3</a><div><p>Preview of very interesting article article</p></div></li>
+          <li><a href="#">Article 4</a><div><p>Preview of very interesting article article</p></div></li>
         </ol>
       </aside>
     </main>
@@ -207,3 +169,5 @@
 </body>
 
 </html>
+ 
+
