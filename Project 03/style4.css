@@ -1,0 +1,88 @@
+/* Styling for the entire list (the navbar container) */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ensures the background contains the floated children */
+    background-color: #333;
+}
+
+/* Styling for the list items (the navigation links) */
+ul.navbar li {
+    /* CORRECTED: Use one float property to align items horizontally */
+    float: left; 
+}
+
+/* Styling for the links inside the list items */
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Hover effect for the links */
+ul.navbar li a:hover {
+    background-color: #111;
+}
+
+/* Styling for the map container */
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+/* Styling for the standalone navigation links (assuming this refers to the nav from the maps.html file) */
+nav a {
+    margin-right: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* --- Media Queries --- */
+
+@media (max-width: 900px) {
+    #map {
+        height: 400px;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    #map {
+        height: 300px;
+    }
+
+    nav {
+        /* This applies only to the <nav> element, not the <ul>.navbar */
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 20px; /* Note: This is larger than the desktop size (18px), which might be intentional. */
+        margin-right: 0;
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
